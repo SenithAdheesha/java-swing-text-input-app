@@ -27,6 +27,7 @@ public class App1 extends JFrame {
         txtName = new JTextField(20);
         lblDisplay = new JLabel("Type and Click");
         JButton btnShow = new JButton("Show");
+        JButton btnClear = new JButton("Clear");
 
 
         btnShow.addActionListener(new ActionListener() {
@@ -35,9 +36,17 @@ public class App1 extends JFrame {
             }
         });
 
+        btnClear.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                txtName.setText("");
+                lblDisplay.setText("Type & Click");
+            }            
+        });
+
 
         con.add(txtName);
         con.add(btnShow);
+        con.add(btnClear);
         con.add(lblDisplay);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
